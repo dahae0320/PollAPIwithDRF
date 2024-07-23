@@ -11,7 +11,6 @@
 ### 작업
 * API 구현
 * Test code
-* CI
 
 ### Model
 * User (사용자, django 기본)

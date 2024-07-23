@@ -5,9 +5,6 @@ from .apiview import PollViewSet, ChoiceList, CreateVote, UserListCreate, LoginV
 
 router = DefaultRouter()
 router.register('polls', PollViewSet, basename='polls')
-
-# pollViewSetPattern = PollViewSet.as_view({'get': 'list', 'post': 'create'})
-
 urlpatterns = [
     path('users/', UserListCreate.as_view(), name='user_create'),
     # obtain_auth_token은 ObtainAuthToken.as_view()와 같다.

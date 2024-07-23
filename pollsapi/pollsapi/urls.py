@@ -16,12 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework_swagger.views import get_swagger_view
+# from rest_framework_swagger.views import get_swagger_view
+
+
+# schema_view = get_swagger_view(title='PollsAPI')
 
 # re-path: 정규식을 사용하여 URL 패턴 정의
 # path: 단순 경로 문자열 사용, 빈 문자열은 루트 URL을 정의함
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('swagger-docs/', get_swagger_view(title='Polls API')),
-    path('', include('polls.urls')),
+    path(r'swagger-docs/', get_swagger_view(title='Polls API')),
+    # path('', include('polls.urls')),
 ]

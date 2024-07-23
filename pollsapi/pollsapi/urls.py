@@ -22,5 +22,6 @@ from rest_framework_swagger.views import get_swagger_view
 # path: 단순 경로 문자열 사용, 빈 문자열은 루트 URL을 정의함
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('swagger-docs/', get_swagger_view(title='Polls API')),
     path('', include('polls.urls')),
 ]
